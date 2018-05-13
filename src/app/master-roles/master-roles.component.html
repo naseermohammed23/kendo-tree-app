@@ -1,0 +1,15 @@
+
+
+<h2>{{masterTitle}}</h2>
+
+<kendo-treeview #tree1
+            [nodes]="data"
+            [children]="children"
+            [hasChildren]="hasChildren"
+            textField="text"
+
+
+            [kendoTreeViewCheckable]="checkableSettings"
+            kendoTreeViewExpandable
+            [(expandedKeys)]="expandedKeys">
+        </kendo-treeview>

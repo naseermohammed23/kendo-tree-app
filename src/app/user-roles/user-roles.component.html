@@ -1,0 +1,26 @@
+
+<h2>{{appName}}</h2>
+
+<div class="example-config">
+  <!--<p>Checked keys: {{this.checkedKeys.join(",")}}</p>-->
+</div>
+<div class="contianer">
+  <div class="row">
+    <div class="col-sm-4">
+      <kendo-treeview #tree1
+                      [nodes]="data"
+                      [children]="children"
+                      [hasChildren]="hasChildren"
+                      textField="text"
+                      [kendoTreeViewCheckable]="checkableSettings"
+
+
+                      (checkedChange)="handleChecking($event)"
+                      kendoTreeViewExpandable>
+      </kendo-treeview>
+    </div>
+  </div>
+</div>
+
+        <!-- [isChecked]="isChecked" -->
+        <button kendoButton (click)="saveData()" [primary]="true">Save</button>
